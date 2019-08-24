@@ -10,7 +10,7 @@
         $subject = $_POST['subject'];
         
         // Store recipient email in variable
-        $to = "bobby.lee.hen@gmail.com";  
+        //$to = "Email adress here";  
         
         // Format Headers
         $headers = "MIME-Version: 1.0\r\n";

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel='icon' href='assets/images/iTfavi.png' type='image/x-icon'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/d00e9b5b54.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>inTech Club</title>
+</head>
+<body>
+    <div id="nav_clear"></div> <!--    Navigation Clear    -->
+
+    <nav id="menu" class="respMenu">
+        <a href="index.html"><img src="assets/images/intech_logo_dark.png" alt="inTech" id="logo"></a>
+        <a href="javascript:void(0);" onClick="responsiveNav()" class="icon">
+            <i class="fa fa-bars"></i>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+
+        <!--    About section   -->
+        <section class="contact_section">
+            <div class="content_area">
+                <h1 id="contact_header">Contact Us</h1>
+                <p>
+                    Send us an email with questions you may have regarding upcoming events, meeting times, or general information.
+                </p>
+                </div id="form_container">
+                    <form method="POST" action="contact_submit.php" id="email_form">
+                        <input type="text" name="firstName" class="inputBox" id="firstName" required size="30" placeholder="First Name"><br>
+            
+                        <input type="text" name="lastName" class="inputBox" id="lastName" required size="30" placeholder="Last Name"><br>
+
+                        <input type="email" name="email" class="inputBox" id="email" required size="40" placeholder="user@domain.com"><br>
+                
+                        <input name="subject" id="subject" class="inputBox" required size="40" placeholder="Enter Subject Here"><br>
+            
+                        <textarea class="inputBox" name="message" cols="40" rows="7" id="message"></textarea><br>
+                
+                        <input type="submit" value="Submit" id="submitButton">  
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <footer>
+        <p>&copy; Broward College 2019</p>
+        <!--<p>Site by<a href="#" target="_blank"><span id="siteAuthor"> Bobby Henderson</span></a></p>-->
+        <p><a href="index.html" class="footer-map">Home</a> | <a href="blog.html" class="footer-map">Blog</a> | <a href="contact.html" class="footer-map">Contact</a></p>
+    </footer>
+</body>
+</html>

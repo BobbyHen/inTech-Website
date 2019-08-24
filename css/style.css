@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+
+/* Updated 6/21/2019 9:48 AM */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+}
+
+/*      Bootstrap Overides      */
+p{
+    padding: 0;
+}
+
+/*      Font Awesome Icon Custom Rules      */
+.fa-facebook, 
+.fa-envelope{
+    font-size: 2.5em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    opacity: 0.7;
+    margin: 0px 5px 0;
+}
+
+.fa-facebook:hover, 
+.fa-envelope:hover{
+    opacity: 1;
+}
+/*      END      */
+
+
+main{
+    background: #333;
+}
+
+
+
+
+
+/****************************************************
+                Navigation Rules
+*****************************************************/
+.respMenu{
+    background-color: #fff;
+    box-shadow: 0px 0px 15px -1px #000;
+    position: fixed;
+    width: 100%;
+    height: 85px;
+    top: 0px;
+    z-index: 100;
+    opacity: 1;
+}
+
+#logo{
+    height: 90%;
+    width: auto;
+    padding: 10px 55px;
+    margin-top: 10px;
+}
+
+.respMenu ul{
+    float: right;
+    margin: 28px 5% 0px;
+}
+
+.respMenu ul li{
+    display: inline-block;
+    padding: 17px;
+}
+
+.respMenu ul li a{
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.respMenu a:hover{
+    text-decoration: none;
+    color: rgb(20, 73, 116);
+}
+
+.icon{
+    display: none;
+}
+
+
+
+
+/*                  Mobile Navigation Messing Around                    */
+
+
+
+
+@media screen and (max-width: 900px) { /* Mobile Navigation */
+    
+    #logo{
+        height: 85%;
+        width: auto;
+        margin: 10px 0px;;
+        display: inline-block;
+    }
+
+    .icon{
+        color: #000;
+        font-size: 1.7em;
+        margin: 0px 30px 0;
+        display: block;
+        float: right;
+        padding: 30px;
+    }
+
+    
+
+    .respMenu ul{
+      float: none;
+      padding: 0;
+      margin: auto;
+      background: #333;
+      display: none;
+    }
+  
+    .respMenu ul li{
+        display: block;
+    }
+  
+    .respMenu ul li a {
+        color: #fff;
+        font-size: 1.4em;
+    }
+
+    nav{
+        opacity: 1;
+    }
+
+    
+
+    .responsive ul{
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        background-color: rgb(64, 78, 161);
+        float: none;
+        margin-top: -7px; 
+        text-align: center;
+        z-index: -10;
+        position: absolute;
+        transition: all 500ms linear;
+    }
+    
+    .responsive ul li{
+        transition: 5ms;
+        display: block;
+        width: 100%;
+        padding: 30px;
+    }
+
+    .responsive ul li:hover{
+        display: block;
+        background: rgba(134, 69, 255, .5);
+        
+    }
+    
+    .responsive ul li a{
+        color: #fff;
+        width: 100%;
+        height: auto;
+        padding: 34px 100px;
+    }
+    
+    .responsive ul li a:hover{
+        height: auto;
+        width: 100%;
+        color: rgb(58, 166, 255);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    #logo{
+        /*display: none;*/
+        height: 85%;
+        width: auto;
+        margin: 5px -28px;
+        display: inline-block;
+    }
+
+    .icon{
+        color: #000;
+        font-size: 1.5em;
+        margin: -10px 10px 0;
+        display: block;
+        float: right;
+        padding: 30px;
+    }
+
+    .respMenu{
+        background-color: #fff;
+        box-shadow: 0px 0px 15px -1px #000;
+        position: fixed;
+        width: 100%;
+        height: 70px;
+    }
+
+    .responsive ul{
+        display: block;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .8);
+        float: none;
+        margin-top: 0px; 
+        text-align: center;
+        z-index: 2;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .respMenu{
+        position: relative;
+    }
+}
+
+
+
+/* H1 (Header) Styling */
+#about_header, #blog_header, #contact_header{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: 55px;
+    color: rgb(233, 233, 233);
+    border-bottom: solid #00d9fff8 6px;
+}
+
+
+#about_paragraph{
+    color: #ffffffd3;
+    font-size: 1.3em;
+    line-height: 1.3;
+}
+
+
+/****************************************************
+                General Section Rules
+*****************************************************/
+section{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 100px;
+}
+
+
+
+.landing_section{
+    background: linear-gradient(to right, rgba(23, 240, 255, 0.6), rgba(219, 41, 255, 0.6)), url("../assets/images/website-design-background.png") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: -60px;
+    padding-bottom: 200px;
+}
+
+.content_area{
+    padding: 0px 25%;
+}
+
+
+@media screen and (max-width: 900px) {
+
+    .content_area{
+        padding: 0px 10%;
+    }
+
+    .landing_section{
+        padding-top: 200px;
+    }
+    section{
+        padding-top: 125px;
+    }
+}
+
+
+
+
+
+
+
+/****************************************************
+                Landing Page Rules
+*****************************************************/
+#landing_info{
+    height: auto;
+    width: 35%;
+    display: inline-block;
+    background-color: black;
+    border-radius: 7px;
+    margin: 50px auto;
+    text-align: center;
+    line-height: 1.4;
+    opacity: 0.6;
+    padding: 30px 0px;
+}
+
+
+#landing_info p{
+    color: #fff;
+    font-size: 1.7em;
+    padding: 10px;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#circle_container{
+    margin-top: 20px;
+}
+
+#logo_circle{ /* Depreciated */
+    text-align: center;
+    height: 430px;
+    width: 430px;
+    display: inline-block;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#socialIcon{
+    margin-top: -10px;
+}
+
+#logo2{
+    height: auto;
+    width: 23%;
+}
+
+
+@media screen and (max-width: 1250px) {
+    #landing_info{
+        width: 60%;
+    }
+
+    #landing_info p{
+        font-size: 1.5em;
+    }
+    
+    #logo2{
+        width: 40%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+     
+    .landing_section{
+        margin-top: -160px;
+    }
+
+    #logo2{
+        width: 50%;
+    }
+}
+
+/****************************************************
+                About Section Rules
+*****************************************************/
+.about_section{
+    background-color: #333;
+    color: #ccc;
+}
+
+
+
+/*     Club Officer Area Rules      */
+#officer_info{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 75%;
+    background-color: rgba(187, 38, 224, 0.8);
+    border-radius: 20px;
+    background: linear-gradient(to right, rgba(222, 54, 255, 0.8), rgba(98, 0, 209, .9), rgba(0, 140, 255, 1));
+    background-size: cover;
+    margin: 60px auto;
+    padding: 0px 20px;
+}
+
+.club_officer{
+    padding: 70px 30px;
+    width: 35%;
+}
+
+.club_officer p{
+    color: #fff;
+    font-size: 1em;
+}
+
+.club_officer h3{
+    margin: 5px auto 7px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+
+
+
+.headshot{
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+
+@media screen and (max-width: 1250px) {
+     
+    #officer_info{
+        width: 90%;
+    }
+
+    .headshot{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+     
+    #officer_info{
+        flex-direction: column;
+        width: 70%;
+    }
+    .club_officer{
+        padding: 30px 30px;
+        width: auto;
+    }
+
+    .headshot{
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+     
+    #officer_info{
+        width: 90%;
+    }
+
+    .headshot{
+        width: 80%;
+    }
+}
+/*      END      */
+
+
+
+/****************************************************
+                Info Section Rules
+*****************************************************/
+.info_section{
+    background: linear-gradient(to right, rgba(57, 182, 255, 0.6), rgba(229, 97, 255, 0.6)), url("../assets/images/bright-squares.png") repeat center;
+    background-attachment: fixed;
+}
+
+
+
+#info_paragraph{
+    color: #fff;
+    font-size: 1.3em;
+    padding: 10px;
+}
+
+#info_para_main{
+    font-size: 1.2em;
+}
+
+/*         Carousel Rules         */
+.carousel_container{
+    height: auto;
+    width: 50%;
+    margin: 50px auto 100px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 10px;
+}
+
+.carousel-inner{
+    height: 500px;
+    border-radius: 10px;
+    border: #fff solid 5px;
+}
+
+.carousel-item{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(31, 31, 31);
+}
+
+.carousel-caption{
+    background: rgba(0, 0, 0, 0.7);
+    margin-bottom: -30px;
+    padding: 40px 80px;
+}
+
+.sliderImg{
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+
+
+
+@media screen and (max-width: 1300px){
+
+
+    .carousel_container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+     
+    .carousel_container{
+        display: none;
+    }
+
+    #info_paragraph{
+        color: #fff;
+        padding: 0px 10%;
+    }
+}
+/*      END      */
+
+
+
+
+
+
+/*      Calender Rules      */
+#calender_container{
+    height: 650px;
+    width: 60%;
+    background: rgb(108, 67, 255);
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+#calender{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1300px) {
+     
+    #calender_container{
+        height: 500px;
+        width: 95%;
+    }
+    
+}
+
+@media screen and (max-width: 900px) {
+     
+    .carousel_container{
+        display: none;
+    }
+
+    #info_paragraph{
+        color: #fff;
+        padding: 0px 10%;
+    }
+
+    #calender_container{
+        height: 500px;
+        width: 100%;
+        border-radius: 0px;
+        padding: 20px 5px;
+        margin: auto;
+    }
+}
+/*      END      */
+
+
+
+
+
+
+/****************************************************
+                Blog Page Rules
+*****************************************************/
+.blog_section{
+    background-color: #333;
+}
+
+article h2{
+    color: #fff;
+}
+
+.post_date{
+    font-size: .8em;
+    text-align: left;
+    margin: 20px 0 10px;
+}
+
+
+article p{
+    margin-bottom: 10px;
+}
+
+.blog_post{
+    color: rgb(204, 204, 204);
+    font-size: 1.3em;
+    text-align: left;
+    padding: 100px auto;
+    /*border: #000 solid 1px;*/
+    margin: 0 10% 250px;
+    border-top: rgb(216, 174, 255) solid 3px;
+
+}
+
+#topPost{
+    border-top: none;
+    margin-top: 100px;
+}
+
+
+
+.blog_img{
+    width: 100%;
+    padding: 2% 0;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+     
+    .blog_post{
+        margin: 0 0 250px;
+    }
+    
+    article p{
+        font-size: .8em;
+    }
+}
+
+
+
+/****************************************************
+                Contact Page Rules
+*****************************************************/
+.contact_section{
+    background-color: #333;
+    width: auto;
+    padding-bottom: 149px;
+}
+
+.contact_section p{
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+#email_form{
+    background-color: rgba(187, 38, 224, 0.8);
+    background: linear-gradient(to right, rgba(222, 54, 255, 0.8), rgba(98, 0, 209, .9), rgba(0, 140, 255, 1));
+    border-radius: 20px;
+    width: 40%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.inputBox{
+    padding: 5px;
+    margin: 5px;
+    width: 40%;
+    opacity: .8;
+    border-radius: 5px;
+    border: none;
+}
+
+.inputBox:hover{
+    opacity: 1;
+}
+
+#subject{
+    margin-top: 20px;
+    width: 50%;
+}
+
+#message{
+    width: 50%;
+    margin: 5px;
+}
+
+
+#submitButton{
+    padding: 10px;
+    width: 90px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+
+@media screen and (max-width: 1250px) {
+     
+    #email_form{
+        width: 65%;
+    }
+    
+    .inputBox{
+        width: 70%;
+    }
+
+    #subject{
+        width: 80%;
+    }
+    
+    #message{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+     
+    #email_form{
+        width: 90%;
+    }
+}
+
+
+
+
+
+/****************************************************
+            Contact Submission Page Rules
+*****************************************************/
+.contact_submit_section{
+    padding-top: 300px;
+}
+
+
+.contact_submit_section p{
+    color: #fff;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.user_submission{
+    background: linear-gradient(to right, rgba(222, 54, 255, 0.8), rgba(98, 0, 209, .9), rgba(0, 140, 255, 1));
+    border-radius: 20px;
+    width: 100%;
+    margin: 40px auto 20px;
+    padding: 70px 0;
+    word-wrap: break-word;
+}
+
+.user_submission p{
+    text-align: left;
+    padding: 0 10%;
+}
+
+.user_submission h3{
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.contact_submit_area{
+    padding-bottom: 300px;
+}
+
+.contact_submit_area p{
+    margin: 10px;
+}
+
+
+
+@media screen and (max-width: 1250px) {
+    
+    .user_submission p{
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .user_submission h3{
+        font-size: 1.5em;
+    }
+    .user_submission p{
+        font-size: 0.8em;
+    }
+}
+
+/****************************************************
+                Footer Rules
+*****************************************************/
+footer{
+    display: inline-block;
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding-top: 80px;
+}
+
+footer p{
+    font-size: 1em;
+    color: #ccc;
+}
+
+footer a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+#siteAuthor{
+    color: rgb(134, 201, 255);
+}
+
+footer a:hover{
+    /*color: rgb(235, 134, 255);*/
+    color: rgb(134, 201, 255);
+    text-decoration: none;
+}
+
+.footer-map{
+    padding: 0px;
+    color: #ccc;
+}
